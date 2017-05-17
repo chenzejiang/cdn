@@ -13,7 +13,6 @@
                   $queue[] = $file;  // 去掉/
 
                 }
-
             }
             printQueue($queue, $path);
         }
