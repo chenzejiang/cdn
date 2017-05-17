@@ -1,0 +1,163 @@
+﻿body{background: #fff;}
+.header{height: 400px;background: #f7fafc;position: relative;}
+.header canvas{display: block;width: 100%;height: 100%;position: absolute;top:0;left: 0;}
+.header .header_con{text-align: center;position: relative;z-index: 10;}
+.header .header_con h1{font-size: 50px;line-height: 150%;color: #0F88EB;font-weight: bold;padding-top: 52px;text-shadow: -3px 2px 0 rgba(0,0,0,0.1);}
+.header .header_con p{margin:20px 0 30px 0;color:#555;font-size: 16px;line-height: 150%;}
+.header .header_con input{width: 940px;height: 50px;border:1px solid #ccc;text-align: center;padding:0 20px;background: rgba(255,255,255,0.8);}
+
+.header .header_a{position: absolute;top:25px;right: 80px;z-index: 10;font-size: 14px;line-height:150%;}
+
+/* cdn 列表 */
+.container{width:1000px;min-width: 1000px;margin:0 auto;}
+.container .cdn_list{margin:60px 0;}
+.container .cdn_list a{width: 95%;margin:0 auto;height:80px;line-height: 80px;border-bottom:1px solid #ddd;text-decoration: none;display: block;transition: all 0.1s ease;padding:0 10px;font-size: 16px;color: #555;}
+.container .cdn_list a:first-child{border-top:1px solid #ddd;}
+.container .cdn_list a:hover{background: rgb(245,245,245);}
+.container .cdn_list a h4{color:#555;font-weight: bold;}
+
+/* cdn 列表详情 */
+.scrollbar-inner{max-height: 400px;background: #fff;}
+.cdn_detail{width:100%;height: 100%;background: rgba(0,0,0,0.2);position: fixed;top:0;left: 0;z-index: 20;}
+.cdn_detail .cdn_detail_box{width:1000px;min-width: 1000px;min-height: 330px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background: #fff;
+}
+.cdn_detail h2{font-size: 36px;text-align: center;color: #60db94;font-weight: bold;height: 70px;line-height: 70px;}
+.cdn_detail ul{margin:0 15px 10px 10px;padding-left:10px;border-left:2px solid #0F88EB;}
+.cdn_detail ul li{height: 80px;border-bottom:1px solid #ddd;padding:0 20px;position:relative;}
+.cdn_detail ul li:first-child{border-top:1px solid #ddd;}
+
+.cdn_detail ul li p{color: #333;line-height: 80px;font-size: 14px;}
+.cdn_detail ul li a{display:inline-block;padding: 5px 8px;font-size: 12px;color: #767676;cursor: pointer;background-color: #fff;border: 1px solid #e1e1e8;border-top:none;border-radius: 0 4px 0 4px;position: absolute;text-decoration:none;}
+.cdn_detail ul li a.copy_link{top:0;right: 80px;}
+.cdn_detail ul li a.copy_url{top:0;right: 0px;}
+
+.footer{height: 50px;color:#7b7b7b;line-height: 50px;background:#F7FAFC;font-size: 14px;text-align: center;}
+.footer a{text-decoration: none;color:#4a4a4a;}
+
+
+
+
+
+
+/*************** SCROLLBAR BASE CSS ***************/
+.scroll-wrapper {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+}
+.scroll-wrapper > .scroll-content {
+    border: none !important;
+    box-sizing: content-box !important;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-height: none;
+    max-width: none !important;
+    overflow: scroll !important;
+    padding: 0;
+    position: relative !important;
+    top: 0;
+    width: auto !important;
+}
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+.scroll-element {
+    display: none;
+}
+.scroll-element, .scroll-element div {
+    box-sizing: content-box;
+}
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+}
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+    cursor: default;
+}
+.scroll-textarea {
+    border: 1px solid #cccccc;
+    border-top-color: #999999;
+}
+.scroll-textarea > .scroll-content {
+    overflow: hidden !important;
+}
+.scroll-textarea > .scroll-content > textarea {
+    border: none !important;
+    box-sizing: border-box;
+    height: 100% !important;
+    margin: 0;
+    max-height: none !important;
+    max-width: none !important;
+    overflow: scroll !important;
+    outline: none;
+    padding: 2px;
+    position: relative !important;
+    top: 0;
+    width: 100% !important;
+}
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+/*************** SIMPLE INNER SCROLLBAR ***************/
+.scrollbar-inner > .scroll-element,
+.scrollbar-inner > .scroll-element div
+{
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+.scrollbar-inner > .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-x {
+    bottom: 2px;
+    height: 8px;
+    left: 0;
+    width: 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y {
+    height: 100%;
+    right: 2px;
+    top: 0;
+    width: 4px;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+    overflow: hidden;
+}
+.scrollbar-inner > .scroll-element .scroll-element_outer,
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+}
+.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #e0e0e0; }
+.scrollbar-inner > .scroll-element .scroll-bar { background-color: #666; }
+.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #111; }
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
+/* update scrollbar offset if both scrolls are visible */
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
