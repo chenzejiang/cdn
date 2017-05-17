@@ -1,7 +1,7 @@
 // 所有模块都通过 define 来定义
 define(['Clipboard'],function(Clipboard){
   return {
-    base_url:"//chenzejiang.com/cdn/frame/",
+    base_url:"//cdn.chenzejiang.com/frame/",
     domClick:function(data){
        var cdn_detail = $("#cdn_detail");
        var _this = this; // 这里作用域的this

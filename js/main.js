@@ -11,7 +11,7 @@ require.config({
     }
 });
 
-require(['../frame/zhihu_canvas/zhihu.canvas.es5.js']);
+require(['zhihu_canvas']);
 require(['jquery','jquery.scrollbar'],function($){
   require(['cdn','cdn_detail'],function(cdn,cdn_detail){
      var app = Object.assign(cdn,cdn_detail);   // 合并
