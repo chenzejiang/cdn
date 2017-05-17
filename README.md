@@ -1,7 +1,16 @@
 # cdn
 建立一个属于自己的cdn库
 
-## 数据用ajax请求 data.php 返回json
+> 技术栈
+
+. html+css+javascript
+. jquery
+. require
+. axios
+. clipboard
+. php
+
+### 数据用ajax请求 data.php 返回json
 ``` json
 {
     "jquery": [
