@@ -4,7 +4,7 @@ define(['cdn_detail','axios'],function(cdn_detail,axios){
        file_data:null,
        // 请求接口
        ajaxFn:function(){
-          axios.get('data.php',{
+          axios.get('//cdn.chenzejiang.com/data.php',{
             params: {
             }
           })
